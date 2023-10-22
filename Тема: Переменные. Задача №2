@@ -1,0 +1,36 @@
+package vovakozyriev;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		double a;
+		double b;
+		double c;
+		double p;
+		double s;
+
+		Scanner kb = new Scanner(System.in);
+
+		System.out.println("Enter first side ( in cm )  and press Enter");
+		a = kb.nextDouble();
+
+		System.out.println("Enter second side ( in cm ) and press Enter");
+		b = kb.nextDouble();
+
+		System.out.println("Enter third side ( in cm ) and press Enter");
+		c = kb.nextDouble();
+
+		p = a + b + c;
+		System.out.println("The perimeter of the triangle is = " + p);
+
+		double halfP = p / 2;
+
+		s = (double) Math.sqrt(halfP * (halfP - a) * (halfP - b) * (halfP - c));
+		
+		System.out.println("The square of the triangle is = " + s);
+	}
+
+}
