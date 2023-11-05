@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner kb = new Scanner(System.in);
+
+		int floor = 9;
+		int entrance = 4;
+		int entranceNum;
+		int floorNum;
+		
+		System.out.println("Enter the flat number, and press Enter.");
+		int flatNum = kb.nextInt();
+
+		if (flatNum >= 1 && flatNum <= 144) {
+			entranceNum = (flatNum - 1) / 36 + 1;
+			floorNum = (((flatNum - 1)% 36) / 4) + 1;
+			System.out.println("This flat is in the " + entranceNum + " entrance.");
+			System.out.println("And this flat is on the " + floorNum + " floor.");
+		}
+		else {
+			System.out.println("Unfortunately, don't have this flat. Please input correct flat number.");
+		}
+	}
+
+}
