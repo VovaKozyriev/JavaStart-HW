@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner kb = new Scanner(System.in);
+
+		int leapYear = 366;
+		int lowYear = 365;
+		int year;
+		
+
+		System.out.println("Enter the year, and press Enter");
+		year = kb.nextInt();
+
+		if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ) {
+			System.out.println("This year is leap year and in this year is " + leapYear + " days.");
+		} else {
+			System.out.println("This year is low year and in this year is " + lowYear + " days.");
+		}
+
+	}
+
+}
