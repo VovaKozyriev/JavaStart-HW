@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner kb = new Scanner(System.in);
+		
+		int a;
+		int b;
+		int c;
+		
+		System.out.println("Enter the first side of triangle, and press Enter");
+		a = kb.nextInt();
+		
+		System.out.println("Enter the second side of triangle, and press Enter");
+		b = kb.nextInt();
+		
+		System.out.println("Enter the third side of triangle, and press Enter");
+		c = kb.nextInt();
+		
+		if (a + b > c) {
+			System.out.println("There is have this triangle");
+		} else if (b + c > a) {
+			System.out.println("There is have this triangle");
+		} else if (a + c > b) {
+			System.out.println("There is have this triangle");
+		}
+		else {
+			System.out.println("There is don't have this triangle");
+		}
+
+	}
+
+}
